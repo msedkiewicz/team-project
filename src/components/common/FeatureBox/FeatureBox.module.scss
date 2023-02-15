@@ -1,4 +1,7 @@
 @import "../../../styles/settings.scss";
+a:hover {
+  text-decoration: none;
+}
 
 .root {
   border: 1px solid #b6b6b6;
@@ -55,6 +58,7 @@
     h5 {
       font-weight: 600;
       margin: 0;
+      text-decoration: none;
     }
 
     p {
