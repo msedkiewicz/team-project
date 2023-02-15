@@ -74,5 +74,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a.isFavorite,
+    a.isCompare {
+      background-color: #d58e32;
+      // border-color: #ffffff;
+      color: #ffffff;
+    }
   }
 }
