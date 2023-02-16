@@ -17,16 +17,16 @@ $form-border-color: #292929;
 /*Define styles for hover effects*/
 
 %hover-effects {
-  background-color: green;
-  color: rgb(236, 32, 13);
-  border-bottom-color: green;
+  background-color: $primary;
+  color: #fff;
+  border-color: $primary;
   transform: translate(0, -5px);
 }
 
 /*Define transitions for hover effects*/
 
 %hover-transitions {
-  transition-property: background-color, color, transform, border-bottom-color;
-  transition-duration: 3s, 2s, 1s, 2.25s;
+  transition-property: background-color, color, transform, border-color;
+  transition-duration: 0.25s, 0.25s, 0.25s, 0.25s;
   transition-timing-function: ease-in-out;
 }

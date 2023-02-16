@@ -77,7 +77,7 @@
                 bottom: -4px;
                 left: 0;
                 width: 100%;
-                border-bottom: 4px solid;
+                border-bottom: 4px solid $primary;
                 @extend %hover-transitions;
                 @extend %hover-effects;
               }
