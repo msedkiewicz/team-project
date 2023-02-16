@@ -29,8 +29,18 @@
     }
 
     .buttons {
+      visibility:hidden;
       display: flex;
       justify-content: space-between;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .btnprice {
+      background-color: $primary;
     }
   }
 
@@ -74,6 +84,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a {
+      margin-inline: 1px;
+    }
+    a.isFavorite,
+    a.isCompare {
+      background-color: #d58e32;
+      border-color: #d58e32;
+      color: #ffffff;
+    }
   }
 
   .btnoldprice {
