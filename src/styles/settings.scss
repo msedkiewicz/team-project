@@ -1,13 +1,48 @@
+// DO NOT USE THESE VARIABLES ANYWHERE
+$darkGrey: #2a2a2a;
+$white: #ffffff;
+$silverGrey: #b6b6b6;
+$tigerEye: #d58e32;
+$charcoalGrey: #434343;
+$jetGrey: #363636;
+$charlestonGrey: #292929;
+$chineseWhite: #e1e1e1;
+$culturedGray: #f4f5f7;
+$neroGrey: rgb(42, 42, 42);
+
+// VARIABLES FOR USE
+
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+$header-topbar-bg: $charcoalGrey;
+$header-bg: $jetGrey;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+$button-main-bg: $darkGrey;
+$button-text: $white;
+$button-outline-border: $darkGrey;
+$button-outline-text: $darkGrey;
+$button-outline-not-hover-bg: $darkGrey;
+$button-outline-not-hover-text: $white;
 
-$primary: #d58e32;
+$feature-box-border: $silverGrey;
+$feature-box-bg: $white;
+$feature-box-text: $tigerEye;
+$feature-box-active-bg: $tigerEye;
+$feature-box-active-border: $tigerEye;
+$feature-box-active-text: $white;
+$feature-box-active-content: $tigerEye;
 
-$text-color: #2a2a2a;
+$product-box-bg: $white;
+$product-box-border: $chineseWhite;
+$product-box-color: $white;
+$product-box-content-text-header: $darkGrey;
+$product-box-content-star: $neroGrey;
 
-$form-border-color: #292929;
+$footer-claim-bg: $darkGrey;
+$footer-bg: $jetGrey;
+
+$primary: $tigerEye;
+
+$text-color: $darkGrey;
+
+$form-border-color: $charlestonGrey;
