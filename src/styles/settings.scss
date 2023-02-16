@@ -11,3 +11,21 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+
+/* Add hover effects to buttons and any hover eements */
+
+/*Define styles for hover effects*/
+%hover-effects {
+  background-color: green;
+  color: rgb(236, 32, 13);
+  border-bottom-color: green;
+  transform: translate(0, -5px);
+}
+
+/*Define transitions for hover effects*/
+%hover-transitions {
+  transition: background-color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: $form-border-color 250ms ease-in-out;
+}

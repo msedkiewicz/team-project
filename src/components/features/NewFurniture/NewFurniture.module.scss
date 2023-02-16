@@ -37,6 +37,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
+
         li {
           display: inline-block;
           margin: 0 0.5rem;
@@ -48,9 +49,20 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
+            @extend %hover-transitions;
 
-            &.active,
             &:hover {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                border-bottom: 4px solid;
+                @extend %hover-effects;
+              }
+            }
+            &.active {
               &::before {
                 content: "";
                 position: absolute;
@@ -88,10 +100,14 @@
             border-radius: 6px;
             background-color: #e1e1e1;
             font-size: 0;
+            @extend %hover-transitions;
 
-            &.active,
-            &:hover {
+            &.active {
               background-color: $primary;
+            }
+
+            &:hover {
+              @extend %hover-effects;
             }
           }
         }
