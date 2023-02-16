@@ -3,7 +3,7 @@ $white: #ffffff;
 $chineseWhite: #e1e1e1;
 $gainsboroWhiteHueOne: #e2e2e2;
 $gainsboroWhiteHueTwo: rgb(216, 216, 216);
-$solitudeBlue: rgb(224, 227, 237);
+
 $darkGrey: #2a2a2a;
 $lightGrey: rgb(169, 169, 169);
 $silverGrey: #b6b6b6;
@@ -12,7 +12,12 @@ $jetGrey: #363636;
 $charlestonGrey: #292929;
 $neroGrey: rgb(42, 42, 42);
 $culturedGray: #f4f5f7;
+
 $tigerEye: #d58e32;
+
+$solitudeBlue: rgb(224, 227, 237);
+
+$cardinGreenAlphaTwenty: rgba(1, 2, 2, 0.2);
 
 // VARIABLES FOR USE
 $base-padding: 24px;
@@ -22,14 +27,24 @@ $primary: $tigerEye;
 $text-color: $darkGrey;
 
 // PERSONALIZED COLOR VARIABLES
-$header-topbar-bg: $charcoalGrey;
 $header-bg: $jetGrey;
+$header-topbar-bg: $charcoalGrey;
+$header-topbar-link: $white;
+$header-topbar-link-hover: $tigerEye;
 $header-phone-number-color: $gainsboroWhiteHueTwo;
 $header-phone-number-icon: $tigerEye;
 $header-chart-box-color: $white;
 $header-chart-icon: $tigerEye;
 $header-chart-counter-bg: $jetGrey;
 $header-chart-counter-color: $solitudeBlue;
+$header-menubar-box-shadow: $cardinGreenAlphaTwenty;
+$header-menubar-bg: $white;
+$header-menubar-link: $darkGrey;
+$header-menubar-link-border: $white;
+$header-menubar-link-hover-active-bg: $tigerEye;
+$header-menubar-link-hover-active-text: $white;
+$header-menubar-link-hover-active-border: $tigerEye;
+$header-menubar-link-active-border: $darkGrey;
 
 $button-main-bg: $darkGrey;
 $button-text: $white;
@@ -69,3 +84,9 @@ $form-field-placeholder-text-color: $darkGrey;
 
 $footer-claim-bg: $darkGrey;
 $footer-bg: $jetGrey;
+$footer-menu-wrapper-header: $white;
+$footer-menu-wrapper-link: $lightGrey;
+$footer-menu-wrapper-link-hover: $white;
+$footer-copyright-color: $lightGrey;
+$footer-social-media-link: $lightGrey;
+$footer-social-media-link-hover: $tigerEye;
