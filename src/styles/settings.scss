@@ -1,21 +1,35 @@
 // DO NOT USE THESE VARIABLES ANYWHERE
-$darkGrey: #2a2a2a;
 $white: #ffffff;
+$chineseWhite: #e1e1e1;
+$gainsboroWhiteHueOne: #e2e2e2;
+$gainsboroWhiteHueTwo: rgb(216, 216, 216);
+$solitudeBlue: rgb(224, 227, 237);
+$darkGrey: #2a2a2a;
+$lightGrey: rgb(169, 169, 169);
 $silverGrey: #b6b6b6;
-$tigerEye: #d58e32;
 $charcoalGrey: #434343;
 $jetGrey: #363636;
 $charlestonGrey: #292929;
-$chineseWhite: #e1e1e1;
-$culturedGray: #f4f5f7;
 $neroGrey: rgb(42, 42, 42);
+$culturedGray: #f4f5f7;
+$tigerEye: #d58e32;
 
 // VARIABLES FOR USE
-
 $base-padding: 24px;
 
+// GLOBAL COLOR VARIABLES
+$primary: $tigerEye;
+$text-color: $darkGrey;
+
+// PERSONALIZED COLOR VARIABLES
 $header-topbar-bg: $charcoalGrey;
 $header-bg: $jetGrey;
+$header-phone-number-color: $gainsboroWhiteHueTwo;
+$header-phone-number-icon: $tigerEye;
+$header-chart-box-color: $white;
+$header-chart-icon: $tigerEye;
+$header-chart-counter-bg: $jetGrey;
+$header-chart-counter-color: $solitudeBlue;
 
 $button-main-bg: $darkGrey;
 $button-text: $white;
@@ -36,13 +50,22 @@ $product-box-bg: $white;
 $product-box-border: $chineseWhite;
 $product-box-color: $white;
 $product-box-content-text-header: $darkGrey;
-$product-box-content-star: $neroGrey;
+$product-box-content-stars: $neroGrey;
+$product-box-line-border: $darkGrey;
+$product-box-line-border-transform: $tigerEye;
+
+$new-furniture-panel-bar-global-border: $gainsboroWhiteHueOne;
+$new-furniture-panel-bar-before-border: $tigerEye;
+$new-furniture-menu-link-color: $neroGrey;
+$new-furniture-menu-active-link-color: $tigerEye;
+$new-furniture-menu-dots-ul-bg: $white;
+$new-furniture-menu-dots-link-bg: $chineseWhite;
+$new-furniture-menu-dots-active-link-bg: $tigerEye;
+
+$form-border-color: $charlestonGrey;
+$form-text-color: $darkGrey;
+$form-text-color-first-child: $tigerEye;
+$form-field-placeholder-text-color: $darkGrey;
 
 $footer-claim-bg: $darkGrey;
 $footer-bg: $jetGrey;
-
-$primary: $tigerEye;
-
-$text-color: $darkGrey;
-
-$form-border-color: $charlestonGrey;
