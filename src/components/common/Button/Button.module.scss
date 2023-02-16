@@ -15,6 +15,7 @@
   &:not(.noHover):hover {
     // color: #ffffff !important;
     // background-color: $primary;
+
     @extend %hover-effects;
     text-decoration: none;
   }
@@ -35,10 +36,11 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-  @extend %hover-transitions;
+  // @extend %hover-transitions;
 
   &:not(.noHover):hover {
     // background-color: #2a2a2a;
+    @extend %hover-transitions;
     @extend %hover-effects;
     // color: #ffffff;
   }

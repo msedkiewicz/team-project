@@ -49,7 +49,26 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            @extend %hover-transitions;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 100%;
+              border-bottom: 0px solid $primary;
+            }
+
+            &.active {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                border-bottom: 4px solid $primary;
+              }
+            }
 
             &:hover {
               &::before {
@@ -59,17 +78,8 @@
                 left: 0;
                 width: 100%;
                 border-bottom: 4px solid;
+                @extend %hover-transitions;
                 @extend %hover-effects;
-              }
-            }
-            &.active {
-              &::before {
-                content: "";
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 100%;
-                border-bottom: 4px solid $primary;
               }
             }
           }
