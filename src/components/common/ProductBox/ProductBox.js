@@ -10,19 +10,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import { useState } from 'react';
 
 const ProductBox = ({ name, price, oldPrice, promo, stars }) => {
-  const [crossedOldPrice, setCrossedOldPrice] = useState(undefined);
-  console.log(oldPrice);
-
-  const showOldPrice = () => {
-    if (oldPrice !== '') {
-      setCrossedOldPrice(oldPrice);
-    } else {
-      setCrossedOldPrice(undefined);
-    }
-  };
+  const oldPricing = oldPrice;
 
   return (
     <div className={styles.root}>
@@ -60,10 +50,12 @@ const ProductBox = ({ name, price, oldPrice, promo, stars }) => {
           </Button>
         </div>
         <div className={styles.price}>
-          {showOldPrice !== undefined && (
+          {oldPricing ? (
             <Button noHover variant='small'>
               $ {oldPrice}
             </Button>
+          ) : (
+            <></>
           )}
           <Button noHover variant='small'>
             $ {price}
