@@ -15,6 +15,7 @@ $form-border-color: #292929;
 /* Add hover effects to buttons and any hover eements */
 
 /*Define styles for hover effects*/
+
 %hover-effects {
   background-color: green;
   color: rgb(236, 32, 13);
@@ -23,30 +24,9 @@ $form-border-color: #292929;
 }
 
 /*Define transitions for hover effects*/
-// %hover-transitions {
-//   transition: background-color 3000ms ease-in-out, color 2000ms ease-in-out,
-//     transform 1000ms ease-in-out, border-bottom-color 2250ms ease-in-out;
-// }
+
 %hover-transitions {
   transition-property: background-color, color, transform, border-bottom-color;
   transition-duration: 3s, 2s, 1s, 2.25s;
   transition-timing-function: ease-in-out;
 }
-// %hover-transitions {
-//   transition: background-color 2000ms ease-in-out;
-//   transition: color 2050ms ease-in-out;
-//   transition: transform 1150ms ease-in-out;
-//   transition: border-bottom-color 2250ms ease-in-out;
-// }
-// %hover-bg-transition {
-//   transition: background-color 2000ms ease-in-out;
-// }
-// %hover-color-transition {
-//   transition: color 2050ms ease-in-out;
-// }
-// %hover-transform-transition {
-//   transition: transform 1150ms ease-in-out;
-// }
-// %hover-border-bottom-color-transition {
-//   transition: border-bottom-color 1150ms ease-in-out;
-// }
