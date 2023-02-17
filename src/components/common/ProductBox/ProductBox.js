@@ -13,12 +13,12 @@ import Button from '../Button/Button';
 import { toggleFavorite } from '../../../redux/productsRedux';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import store from '../../../redux/store';
-import { Provider } from 'react-redux';
 
-const ProductBox = ({ name, price, promo, stars, isFavorite, isCompare, id }) => {
+const ProductBox = ({ name, price, promo, stars, isFavorite, isCompare, id, oldPrice }) => {
+  const oldPricing = oldPrice;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
   const productId = id;
+  
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
@@ -27,7 +27,6 @@ const ProductBox = ({ name, price, promo, stars, isFavorite, isCompare, id }) =>
   };
 
   return (
-    <Provider store={store}>
       <div className={styles.root}>
         <div className={styles.photo}>
           {promo && <div className={styles.sale}>{promo}</div>}
@@ -70,13 +69,19 @@ const ProductBox = ({ name, price, promo, stars, isFavorite, isCompare, id }) =>
             </Button>
           </div>
           <div className={styles.price}>
+            {oldPricing ? (
+              <Button noHover className={styles.btnoldprice} variant='small'>
+                $ {oldPrice}
+              </Button>
+            ) : (
+              <></>
+            )}
             <Button className={styles.btnprice} noHover variant='small'>
               $ {price}
             </Button>
           </div>
         </div>
       </div>
-    </Provider>
   );
 };
 
@@ -84,6 +89,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   isFavorite: PropTypes.bool,

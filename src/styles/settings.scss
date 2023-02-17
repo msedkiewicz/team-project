@@ -11,7 +11,26 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
-
 $creamy-pink: #ffc2cd;
 
 $isFavorite: $creamy-pink;
+
+
+/* Add hover effects to buttons and any hover elements */
+
+/*Define styles for hover effects*/
+
+%hover-effects {
+  background-color: $primary;
+  color: #fff;
+  border-color: $primary;
+  transform: translate(0, -5px);
+}
+
+/*Define transitions for hover effects*/
+
+%hover-transitions {
+  transition-property: background-color, color, transform, border-color;
+  transition-duration: 0.25s, 0.25s, 0.25s, 0.25s;
+  transition-timing-function: ease-in-out;
+}
