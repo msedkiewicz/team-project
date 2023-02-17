@@ -10,12 +10,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   getCompareProducts,
   toggleCompare,
   toggleFavorite,
 } from '../../../redux/productsRedux';
-import { useDispatch, useSelector } from 'react-redux';
 
 const ProductBox = ({
   name,
@@ -34,6 +34,8 @@ const ProductBox = ({
   const productId = id;
   const compareProducts = useSelector(state => getCompareProducts(state));
 
+  console.log('compareProducts', compareProducts);
+
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
@@ -44,16 +46,7 @@ const ProductBox = ({
   const toggleCompareValue = e => {
     e.preventDefault();
     setCompareValue(!compareValue);
-
-    const productToCompare = compareProducts.find(p => p.id === id);
-
-    if (productToCompare && productToCompare.isCompare) {
-      dispatch(toggleCompare(id));
-    } else if (!productToCompare && compareProducts.length < 4) {
-      dispatch(toggleCompare(id));
-    } else {
-      return;
-    }
+    dispatch(toggleCompare(id));
   };
 
   return (
