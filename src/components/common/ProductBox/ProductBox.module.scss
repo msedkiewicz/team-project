@@ -88,10 +88,14 @@
     a {
       margin-inline: 1px;
     }
-    a.isFavorite,
     a.isCompare {
       background-color: #d58e32;
       border-color: #d58e32;
+      color: #ffffff;
+    }
+    a.isFavorite {
+      background-color: $isFavorite;
+      border-color: $isFavorite;
       color: #ffffff;
     }
   }
