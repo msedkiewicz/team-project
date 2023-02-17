@@ -90,3 +90,24 @@ $footer-menu-wrapper-link-hover: $white;
 $footer-copyright-color: $lightGrey;
 $footer-social-media-link: $lightGrey;
 $footer-social-media-link-hover: $tigerEye;
+
+$form-border-color: #292929;
+
+/* Add hover effects to buttons and any hover eements */
+
+/*Define styles for hover effects*/
+
+%hover-effects {
+  background-color: $primary;
+  color: #fff;
+  border-color: $primary;
+  transform: translate(0, -5px);
+}
+
+/*Define transitions for hover effects*/
+
+%hover-transitions {
+  transition-property: background-color, color, transform, border-color;
+  transition-duration: 0.25s, 0.25s, 0.25s, 0.25s;
+  transition-timing-function: ease-in-out;
+}
