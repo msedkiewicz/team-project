@@ -58,7 +58,7 @@
     }
   }
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
   .root {
     display: flex;
     flex-direction: column;
@@ -77,6 +77,48 @@
       position: relative;
       justify-content: flex-start;
       width: 240px;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .root {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border: none;
+    width: 242px;
+
+    .category {
+      border: 1px solid $form-border-color;
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      height: 40px;
+    }
+
+    .searchField {
+      height: 40px;
+      width: 300px;
+      border: 1px solid $form-border-color;
+      border-left: none;
+      position: relative;
+      display: inline-block;
+      padding-top: 8px;
+      input {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid $form-border-color;
+        padding: 32px;
+        z-index: 1;
+        margin: 30px 0 0 -208px;
+      }
+    }
+    .searchField:hover {
+      input {
+        display: block;
+      }
     }
   }
 }
