@@ -58,3 +58,24 @@
     }
   }
 }
+@media all and (max-width: 768px){
+  .root {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    .category {
+      border-bottom: 1px solid $form-border-color;
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      width: 240px;
+    }
+
+    .searchField {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      width: 240px;
+    }
+  }
+}
