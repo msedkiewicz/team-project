@@ -1,14 +1,95 @@
+// DO NOT USE THESE VARIABLES ANYWHERE
+$white: #ffffff;
+$chineseWhite: #e1e1e1;
+$gainsboroWhiteHueOne: #e2e2e2;
+$gainsboroWhiteHueTwo: rgb(216, 216, 216);
+
+$darkGrey: #2a2a2a;
+$lightGrey: rgb(169, 169, 169);
+$silverGrey: #b6b6b6;
+$charcoalGrey: #434343;
+$jetGrey: #363636;
+$charlestonGrey: #292929;
+$neroGrey: rgb(42, 42, 42);
+$culturedGray: #f4f5f7;
+
+$tigerEye: #d58e32;
+
+$solitudeBlue: rgb(224, 227, 237);
+
+$cardinGreenAlphaTwenty: rgba(1, 2, 2, 0.2);
+
+// VARIABLES FOR USE
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+// GLOBAL COLOR VARIABLES
+$primary: $tigerEye;
+$text-color: $darkGrey;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+// PERSONALIZED COLOR VARIABLES
+$header-bg: $jetGrey;
+$header-topbar-bg: $charcoalGrey;
+$header-topbar-link: $white;
+$header-topbar-link-hover: $tigerEye;
+$header-phone-number-color: $gainsboroWhiteHueTwo;
+$header-phone-number-icon: $tigerEye;
+$header-chart-box-color: $white;
+$header-chart-icon: $tigerEye;
+$header-chart-counter-bg: $jetGrey;
+$header-chart-counter-color: $solitudeBlue;
+$header-menubar-box-shadow: $cardinGreenAlphaTwenty;
+$header-menubar-bg: $white;
+$header-menubar-link: $darkGrey;
+$header-menubar-link-border: $white;
+$header-menubar-link-hover-active-bg: $tigerEye;
+$header-menubar-link-hover-active-text: $white;
+$header-menubar-link-hover-active-border: $tigerEye;
+$header-menubar-link-active-border: $darkGrey;
 
-$primary: #d58e32;
+$button-main-bg: $darkGrey;
+$button-text: $white;
+$button-outline-border: $darkGrey;
+$button-outline-text: $darkGrey;
+$button-outline-not-hover-bg: $darkGrey;
+$button-outline-not-hover-text: $white;
 
-$text-color: #2a2a2a;
+$feature-box-border: $silverGrey;
+$feature-box-bg: $white;
+$feature-box-text: $tigerEye;
+$feature-box-active-bg: $tigerEye;
+$feature-box-active-border: $tigerEye;
+$feature-box-active-text: $white;
+$feature-box-active-content: $tigerEye;
+
+$product-box-bg: $white;
+$product-box-border: $chineseWhite;
+$product-box-color: $white;
+$product-box-content-text-header: $darkGrey;
+$product-box-content-stars: $neroGrey;
+$product-box-line-border: $darkGrey;
+$product-box-line-border-transform: $tigerEye;
+
+$new-furniture-panel-bar-global-border: $gainsboroWhiteHueOne;
+$new-furniture-panel-bar-before-border: $tigerEye;
+$new-furniture-menu-link-color: $neroGrey;
+$new-furniture-menu-active-link-color: $tigerEye;
+$new-furniture-menu-dots-ul-bg: $white;
+$new-furniture-menu-dots-link-bg: $chineseWhite;
+$new-furniture-menu-dots-active-link-bg: $tigerEye;
+
+$form-border-color: $charlestonGrey;
+$form-text-color: $darkGrey;
+$form-text-color-first-child: $tigerEye;
+$form-field-placeholder-text-color: $darkGrey;
+
+$footer-claim-bg: $darkGrey;
+$footer-bg: $jetGrey;
+$footer-menu-wrapper-header: $white;
+$footer-menu-wrapper-link: $lightGrey;
+$footer-menu-wrapper-link-hover: $white;
+$footer-copyright-color: $lightGrey;
+$footer-social-media-link: $lightGrey;
+$footer-social-media-link-hover: $tigerEye;
 
 $form-border-color: #292929;
 $creamy-pink: #ffc2cd;
