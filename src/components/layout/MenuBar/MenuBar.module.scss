@@ -35,8 +35,12 @@
       border-top: 4px solid #ffffff;
       font-weight: 500;
       letter-spacing: 1px;
+      @extend %hover-transitions;
 
-      &:hover,
+      &:hover {
+        @extend %hover-effects;
+      }
+
       &.active {
         background-color: $primary;
         color: #ffffff;

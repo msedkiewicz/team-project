@@ -7,7 +7,6 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -16,6 +15,11 @@
     }
     overflow: hidden;
     align-items: flex-end;
+
+    .image {
+      object-fit: cover;
+      width: 100%;
+    }
 
     .sale {
       position: absolute;
@@ -32,6 +36,7 @@
       visibility:hidden;
       display: flex;
       justify-content: space-between;
+      margin: 0 10px;
     }
   }
 
@@ -88,11 +93,21 @@
     a {
       margin-inline: 1px;
     }
-    a.isFavorite,
     a.isCompare {
       background-color: #d58e32;
       border-color: #d58e32;
+      color: white;
+    }
+    a.isFavorite {
+      background-color: $isFavorite;
+      border-color: $isFavorite;
       color: #ffffff;
     }
+  }
+
+  .btnoldprice {
+    color: red;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
   }
 }
