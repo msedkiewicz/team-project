@@ -7,6 +7,10 @@
     height: 145px;
   }
 
+  .banner {
+    align-items: center;
+  }
+
   .phoneNumber {
     p {
       margin: 0;
@@ -67,6 +71,23 @@
           background-color: lighten($primary, 10%);
         }
       }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .phoneNumber {
+      position: absolute;
+      right: 0;
+      left: 50%;
+      top: 20.5%;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .cart {
+      padding-bottom: 2rem;
     }
   }
 }
