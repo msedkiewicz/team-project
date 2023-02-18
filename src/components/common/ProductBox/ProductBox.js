@@ -14,11 +14,21 @@ import { toggleFavorite } from '../../../redux/productsRedux';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-const ProductBox = ({ name, price, promo, stars, image, isFavorite, isCompare, id, oldPrice }) => {
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  image,
+  isFavorite,
+  isCompare,
+  id,
+  oldPrice,
+}) => {
   const oldPricing = oldPrice;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
   const productId = id;
-  
+
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
@@ -27,17 +37,17 @@ const ProductBox = ({ name, price, promo, stars, image, isFavorite, isCompare, i
   };
 
   return (
-      <div className={styles.root}>
-        <div className={styles.photo}>
-          <img className={styles.image} src={image} alt='furniture' />
-          {promo && <div className={styles.sale}>{promo}</div>}
-          <div className={styles.buttons}>
-            <Button variant='small'>Quick View</Button>
-            <Button variant='small'>
-              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-            </Button>
-          </div>
+    <div className={styles.root}>
+      <div className={styles.photo}>
+        <img className={styles.image} src={image} alt='furniture' />
+        {promo && <div className={styles.sale}>{promo}</div>}
+        <div className={styles.buttons}>
+          <Button variant='small'>Quick View</Button>
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          </Button>
         </div>
+      </div>
       <div className={styles.content}>
         <h5>{name}</h5>
         <div className={styles.stars}>
@@ -96,6 +106,7 @@ const ProductBox = ({ name, price, promo, stars, image, isFavorite, isCompare, i
           </div>
         </div>
       </div>
+    </div>
   );
 };
 
