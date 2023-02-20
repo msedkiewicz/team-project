@@ -7,12 +7,10 @@ const SET_VIEWPORT = createActionName('SET_VIEWPORT');
 // action creators
 export const setViewport = payload => ({ type: SET_VIEWPORT, payload });
 
-const viewportReducer = (statePart = [], action) => {
+const viewportReducer = (statePart = { mode: '' }, action) => {
   switch (action.type) {
     case SET_VIEWPORT: {
-      return statePart.mode !== action.payload.mode
-        ? { ...statePart, ...action.payload }
-        : statePart;
+      return { mode: action.payload };
     }
     default:
       return statePart;
