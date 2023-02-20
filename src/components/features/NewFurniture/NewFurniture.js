@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import { connect } from 'react-redux';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     splitPage: true,
+    viewport: this.props.viewport.mode,
+    productsCount: 8,
   };
 
   handlePageChange(newPage) {
@@ -17,6 +20,17 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  componentDidUpdate() {
+    if (this.props.viewport.mode !== this.state.viewport) {
+      const newProductsCount = this.getProductCountToViewport(this.props.viewport.mode);
+
+      this.setState({
+        productsCount: newProductsCount,
+        viewport: this.props.viewport.mode,
+      });
+    }
   }
 
   getProductCountToViewport(mode) {
@@ -31,12 +45,11 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, mode } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { categories, products } = this.props;
+    const { activeCategory, activePage, productsCount } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const productCount = this.getProductCountToViewport(mode);
-    const pagesCount = Math.ceil(categoryProducts.length / productCount);
+    const pagesCount = Math.ceil(categoryProducts.length / productsCount);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -81,9 +94,9 @@ class NewFurniture extends React.Component {
           </div>
           <div className='row'>
             {categoryProducts
-              .slice(activePage * productCount, (activePage + 1) * productCount)
+              .slice(activePage * productsCount, (activePage + 1) * productsCount)
               .map(item => (
-                <div key={item.id} className='col-3 col-md-4 col-sm-6 col-xs-12'>
+                <div key={item.id} className='col-3'>
                   <ProductBox {...item} />
                 </div>
               ))}
@@ -96,6 +109,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  viewport: PropTypes.string,
   mode: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
@@ -121,4 +135,8 @@ NewFurniture.defaultProps = {
   products: [],
 };
 
-export default NewFurniture;
+const mapStateToProps = state => ({
+  viewport: state.viewport,
+});
+
+export default connect(mapStateToProps)(NewFurniture);
