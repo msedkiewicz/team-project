@@ -33,7 +33,6 @@ const ProductBox = ({
   const [compareValue, setCompareValue] = useState(isCompare);
   const productId = id;
   const compareProducts = useSelector(state => getCompareProducts(state));
-
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
@@ -44,7 +43,20 @@ const ProductBox = ({
   const toggleCompareValue = e => {
     e.preventDefault();
     setCompareValue(!compareValue);
+<<<<<<< HEAD
     dispatch(toggleCompare(id));
+=======
+
+    const productToCompare = compareProducts.find(p => p.id === id);
+
+    if (productToCompare && productToCompare.isCompare) {
+      dispatch(toggleCompare(id));
+    } else if (!productToCompare && compareProducts.length < 4) {
+      dispatch(toggleCompare(id));
+    } else {
+      return;
+    }
+>>>>>>> 99b797e (Finish styling the StickyBar component, add product removal functionality, fix toggleCompareValue in ProductBox.)
   };
 
   return (
