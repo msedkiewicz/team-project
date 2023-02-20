@@ -8,6 +8,7 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    splitPage: true,
   };
 
   handlePageChange(newPage) {
@@ -18,12 +19,24 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  getProductCountToViewport(mode) {
+    switch (mode) {
+      case 'mobile':
+        return 1;
+      case 'tablet':
+        return 2;
+      default:
+        return 8;
+    }
+  }
+
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, mode } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const productCount = this.getProductCountToViewport(mode);
+    const pagesCount = Math.ceil(categoryProducts.length / productCount);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -67,11 +80,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * productCount, (activePage + 1) * productCount)
+              .map(item => (
+                <div key={item.id} className='col-3 col-md-4 col-sm-6 col-xs-12'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -81,6 +96,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  mode: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
