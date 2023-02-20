@@ -1,13 +1,12 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
-<<<<<<< HEAD
+
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
-=======
+
 export const getCompareProducts = ({ products }) =>
   products.filter(product => product.isCompare);
->>>>>>> f10a8b5 (Limit the number of products added to compare to 4. Add selector toggleCompare to productsRedux)
 
 /* actions */
 

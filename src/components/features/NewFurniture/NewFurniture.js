@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import StickyBar from '../StickyBar/StickyBar';
 
 class NewFurniture extends React.Component {
   state = {
@@ -72,6 +73,7 @@ class NewFurniture extends React.Component {
               </div>
             ))}
           </div>
+          <StickyBar />
         </div>
       </div>
     );
