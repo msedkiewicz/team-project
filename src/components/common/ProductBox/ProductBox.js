@@ -34,8 +34,6 @@ const ProductBox = ({
   const productId = id;
   const compareProducts = useSelector(state => getCompareProducts(state));
 
-  console.log('compareProducts', compareProducts);
-
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
