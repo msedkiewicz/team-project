@@ -2,4 +2,11 @@
 
 .root {
   padding: 5rem 0;
+
+}
+
+@media (max-width: 991px) {
+  .box {
+    margin-bottom: 15px;
+  }
 }
