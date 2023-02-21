@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCompareProducts, toggleCompare } from '../../../redux/productsRedux';
 import styles from './StickyBar.module.scss';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Button from '../../common/Button/Button';
 
 const StickyBar = () => {
   const compareProducts = useSelector(state => getCompareProducts(state));
