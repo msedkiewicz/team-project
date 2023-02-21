@@ -4,7 +4,9 @@ import styles from './HotDealsProductBox.module.scss';
 const HotDealsProductBox = () => {
   return (
     <div className={styles.root}>
-      <div></div>
+      <div>
+        <h2>dkaglfjfkdg</h2>
+      </div>
     </div>
   );
 };
