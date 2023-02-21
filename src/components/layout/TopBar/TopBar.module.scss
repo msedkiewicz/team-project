@@ -39,4 +39,52 @@
       margin-right: 5px;
     }
   }
+
+  @media (max-width: 576px) {
+    .topOptions ul li {
+      margin-right: 0.5rem;
+
+      .icon {
+        margin-left: 2px;
+      }
+    }
+
+    .topMenu ul li {
+      margin-left: 0.5rem;
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+
+    ul li a {
+      font-size: 10px;
+    }
+
+    .topMenuText {
+      font-size: 0;
+    }
+  }
+
+  @media (max-width: 225px) {
+    .topOptions ul li {
+      margin-right: 0.1rem;
+
+      .icon {
+        margin-left: 1px;
+      }
+    }
+
+    .topMenu ul li {
+      margin-left: 0.1rem;
+
+      .icon {
+        margin-right: 1px;
+      }
+    }
+
+    ul li a {
+      font-size: 8px;
+    }
+  }
 }
