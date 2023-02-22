@@ -43,9 +43,6 @@ const ProductBox = ({
   const toggleCompareValue = e => {
     e.preventDefault();
     setCompareValue(!compareValue);
-<<<<<<< HEAD
-    dispatch(toggleCompare(id));
-=======
 
     const productToCompare = compareProducts.find(p => p.id === id);
 
@@ -56,7 +53,6 @@ const ProductBox = ({
     } else {
       return;
     }
->>>>>>> 99b797e (Finish styling the StickyBar component, add product removal functionality, fix toggleCompareValue in ProductBox.)
   };
 
   return (
