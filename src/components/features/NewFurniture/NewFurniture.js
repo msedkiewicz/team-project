@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import StickyBar from '../StickyBar/StickyBar';
 
 class NewFurniture extends React.Component {
   state = {
@@ -50,7 +50,7 @@ class NewFurniture extends React.Component {
               <div className={'col ' + styles.menu}>
                 <ul>
                   {categories.map(item => (
-                    <li key={item.id}>
+                    <li key={item.name}>
                       <a
                         className={item.id === activeCategory && styles.active}
                         onClick={() => this.handleCategoryChange(item.id)}
@@ -73,6 +73,7 @@ class NewFurniture extends React.Component {
               </div>
             ))}
           </div>
+          <StickyBar />
         </div>
       </div>
     );
