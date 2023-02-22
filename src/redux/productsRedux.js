@@ -2,6 +2,7 @@
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
 export const getHotDeal = ({ hotDealsProduct }) => hotDealsProduct;
+export const getPromotedProduct = ({ promotedProduct }) => promotedProduct;
 
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);

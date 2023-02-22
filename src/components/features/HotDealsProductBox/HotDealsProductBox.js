@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import ProductBox from '../../common/ProductBox/ProductBox';
 import Button from '../../common/Button/Button';
 import styles from './HotDealsProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

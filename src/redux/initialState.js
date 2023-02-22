@@ -314,7 +314,7 @@ const initialState = {
     isFavorite: false,
     isCompare: false,
   },
-  promotedPrduct: {
+  promotedProduct: {
     image: './images/furniture_images/bed_images/bed-1.jpg',
     imageName: 'bedroom-bad',
     softTitle: 'indoor',
