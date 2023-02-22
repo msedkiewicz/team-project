@@ -31,6 +31,10 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    .timerComponent {
+      visibility: hidden;
+    }
   }
 
   .hotDealsHeaderContainer {
@@ -53,7 +57,6 @@
     }
 
     .dotsContainer {
-      // justify-content: right;
       display: flex;
       align-items: center;
     }
@@ -70,8 +73,10 @@
       }
     }
   }
+
   &:hover {
-    .btnAddToChart {
+    .btnAddToChart,
+    .timerComponent {
       visibility: visible;
     }
   }

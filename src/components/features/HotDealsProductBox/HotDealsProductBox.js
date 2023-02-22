@@ -32,7 +32,10 @@ const HotDealsProductBox = () => {
         <Button className={styles.btnAddToChart} variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
         </Button>
-        <Timer className={styles.timerComponent} />
+
+        <div className={styles.timerComponent}>
+          <Timer />
+        </div>
       </div>
       <div className={styles.content}>
         <h5>{hotDealsProduct.name}</h5>
