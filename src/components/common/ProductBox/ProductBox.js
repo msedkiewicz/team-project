@@ -40,8 +40,6 @@ const ProductBox = ({
     dispatch(toggleFavorite(productId));
   };
 
-  console.log(image);
-
   const toggleCompareValue = e => {
     e.preventDefault();
     setCompareValue(!compareValue);
