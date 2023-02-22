@@ -67,7 +67,8 @@
         @extend %hover-transitions;
 
         &:hover {
-          @extend %hover-effects;
+          // @extend %hover-effects;
+          color: $primary;
         }
       }
     }

@@ -8,7 +8,7 @@ import {
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -16,12 +16,14 @@ import {
   toggleCompare,
   toggleFavorite,
 } from '../../../redux/productsRedux';
+import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
 
 const ProductBox = ({
   name,
   price,
   promo,
   stars,
+  userRating,
   image,
   isFavorite,
   isCompare,
@@ -29,6 +31,7 @@ const ProductBox = ({
   oldPrice,
 }) => {
   const oldPricing = oldPrice;
+  const starsNumber = stars;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
   const [compareValue, setCompareValue] = useState(isCompare);
   const productId = id;
@@ -58,6 +61,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img className={styles.image} src={image} alt='furniture' />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -68,47 +72,37 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
-      <div className={styles.line}></div>
-      <div className={styles.actions}>
-        <div className={styles.outlines}>
-          <Button
-            variant='outline'
-            onClick={e => toggleFavoriteValue(e)}
-            className={favoriteValue ? styles.isFavorite : undefined}
-          >
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-          </Button>
-          <Button
-            variant='outline'
-            className={isCompare ? styles.isCompare : ''}
-            onClick={toggleCompareValue}
-          >
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-          </Button>
-        </div>
-        <div className={styles.price}>
-          {oldPricing ? (
-            <Button noHover className={styles.btnoldprice} variant='small'>
-              $ {oldPrice}
+        <UserRatingBox stars={starsNumber} id={productId} userRating={userRating} />
+
+        <div className={styles.line}></div>
+        <div className={styles.actions}>
+          <div className={styles.outlines}>
+            <Button
+              variant='outline'
+              onClick={e => toggleFavoriteValue(e)}
+              className={favoriteValue ? styles.isFavorite : undefined}
+            >
+              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
             </Button>
-          ) : (
-            <></>
-          )}
-          <Button className={styles.btnprice} noHover variant='small'>
-            $ {price}
-          </Button>
+            <Button
+              variant='outline'
+              className={isCompare ? styles.isCompare : undefined}
+            >
+              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            </Button>
+          </div>
+          <div className={styles.price}>
+            {oldPricing ? (
+              <Button noHover className={styles.btnoldprice} variant='small'>
+                $ {oldPrice}
+              </Button>
+            ) : (
+              <></>
+            )}
+            <Button className={styles.btnprice} noHover variant='small'>
+              $ {price}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
@@ -127,6 +121,7 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.bool,
   isCompare: PropTypes.bool,
   id: PropTypes.string,
+  userRating: PropTypes.bool,
 };
 
 export default ProductBox;
