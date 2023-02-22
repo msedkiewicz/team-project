@@ -18,6 +18,14 @@ const HotDealsProductBox = () => {
 
   return (
     <div className={styles.root}>
+      <div className={styles.hotDealsHeaderContainer}>
+        <div className={styles.hotText}>hot deals</div>
+        <div className={styles.dotsContainer}>
+          <div className={styles.dot}></div>
+          <div className={styles.dot}></div>
+          <div className={styles.dot}></div>
+        </div>
+      </div>
       <div className={styles.photo}>
         <img className={styles.image} src={hotDealsProduct.image} alt='furniture' />
         <Button className={styles.btnAddToChart} variant='small'>

@@ -3,6 +3,7 @@
 .root {
   background-color: #ffffff;
   margin-top: 4rem;
+  position: relative;
 
   .photo {
     position: relative;
@@ -21,12 +22,51 @@
       width: 100%;
       height: 100%;
     }
+
+    .btnAddToChart {
+      visibility: hidden;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-  .btnAddToChart {
-    visibility: hidden;
+  .hotDealsHeaderContainer {
     position: absolute;
-    top: 30%;
-    left: 21%;
+    z-index: 1;
+    padding: 0.5rem 0.7rem;
+    background: $button-main-bg;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .hotText {
+      text-transform: uppercase;
+      color: $button-text;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+    .dotsContainer {
+      // justify-content: right;
+      display: flex;
+      align-items: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: $button-text;
+      border-radius: 50%;
+      margin-left: 5px;
+
+      &:hover {
+        background: $primary;
+      }
+    }
   }
   &:hover {
     .btnAddToChart {
