@@ -24,7 +24,7 @@
 
   .textBar {
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
@@ -48,7 +48,7 @@
   }
   .shopNowButton {
     position: absolute;
-    top: 68%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     background-color: $white;
@@ -66,5 +66,18 @@
       box-shadow: 0px 0px 12px $charcoalGrey;
       background-color: $primary;
     }
+  }
+
+  .arrowButtonsWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+  .arrowButton {
+    // font-size: 10px;
+    width: 50%;
+    text-align: center;
   }
 }
