@@ -5,9 +5,11 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import PromotedSection from '../../layout/PromotedSection/PromotedSection';
 
 const Homepage = () => (
   <div className={styles.root}>
+    <PromotedSection />
     <FeatureBoxes />
     <NewFurniture />
   </div>
