@@ -112,8 +112,14 @@
   }
 
   .btnoldprice {
-    color: red;
+    background-color: #fff;
+    color: gray;
     text-decoration: line-through;
+    text-decoration-color: #000;
     text-decoration-thickness: 2px;
+  }
+
+  .price {
+    display: flex;
   }
 }
