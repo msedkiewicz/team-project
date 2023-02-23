@@ -613,6 +613,11 @@ const initialState = {
     thirdTitle: 'COLLECTION',
     thirdSubtitle: 'SAVE UP 45% OF FURNITURE',
   },
+  brands: [
+    { id: 1, image: './images/brands-logos/image_Mebelek.jpg' },
+    { id: 2, image: './images/brands-logos/image_Siedzonko.jpg' },
+    { id: 3, image: './images/brands-logos/image_TARTAK.jpg' },
+  ],
 };
 
 export default initialState;
