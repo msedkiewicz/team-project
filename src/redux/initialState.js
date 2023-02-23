@@ -344,6 +344,7 @@ const initialState = {
     softTitle: 'indoor',
     strongTitle: 'furniture',
     description: 'save up 50% of all furniture',
+  },
   viewport: {
     mode: '',
   },
