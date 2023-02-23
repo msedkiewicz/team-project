@@ -617,6 +617,9 @@ const initialState = {
     { id: 1, image: './images/brands-logos/image_Mebelek.jpg' },
     { id: 2, image: './images/brands-logos/image_Siedzonko.jpg' },
     { id: 3, image: './images/brands-logos/image_TARTAK.jpg' },
+    { id: 4, image: './images/brands-logos/image_Mebelek.jpg' },
+    { id: 5, image: './images/brands-logos/image_Siedzonko.jpg' },
+    { id: 6, image: './images/brands-logos/image_TARTAK.jpg' },
   ],
 };
 
