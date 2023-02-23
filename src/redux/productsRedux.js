@@ -1,6 +1,8 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getHotDeal = ({ hotDealsProduct }) => hotDealsProduct;
+export const getPromotedProduct = ({ promotedProduct }) => promotedProduct;
 
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
@@ -9,7 +11,6 @@ export const getCompareProducts = ({ products }) =>
   products.filter(product => product.isCompare);
 
 /* actions */
-
 const createActionName = actionName => `app/lists/${actionName}`;
 const TOGGLE_FAVORITE = createActionName('TOGGLE_FAVORITE');
 const TOGGLE_COMPARE = createActionName('TOGGLE_COMPARE');

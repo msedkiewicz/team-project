@@ -572,6 +572,26 @@ const initialState = {
   cart: {
     products: [],
   },
+  hotDealsProduct: {
+    id: 'aenean-ru-bristique-10',
+    name: 'Aenean Ru Bristique 10',
+    category: 'bed',
+    image: './images/furniture_images/bed_images/bed-10.jpg',
+    oldPrice: 50,
+    price: 30,
+    stars: 2,
+    promo: 'sale',
+    newFurniture: true,
+    isFavorite: false,
+    isCompare: false,
+  },
+  promotedProduct: {
+    image: './images/furniture_images/bed_images/bed-1.jpg',
+    imageName: 'bedroom-bad',
+    softTitle: 'indoor',
+    strongTitle: 'furniture',
+    description: 'save up 50% of all furniture',
+  },
   viewport: {
     mode: '',
   },

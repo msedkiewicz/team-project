@@ -13,9 +13,9 @@ const MainLayout = ({ children }) => {
     const handleViewport = () => {
       if (window.innerWidth <= 415) {
         dispatch(setViewport('mobile'));
-      } else if (window.innerWidth <= 820) {
+      } else if (window.innerWidth <= 992) {
         dispatch(setViewport('tablet'));
-      } else if (window.innerWidth > 820) {
+      } else if (window.innerWidth > 992) {
         dispatch(setViewport('desktop'));
       }
     };
