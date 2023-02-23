@@ -33,7 +33,7 @@
     }
 
     .buttons {
-      visibility:hidden;
+      visibility: hidden;
       display: flex;
       justify-content: space-between;
       margin: 0 10px;
@@ -64,6 +64,12 @@
       a {
         text-decoration: none;
         color: rgb(42, 42, 42);
+        @extend %hover-transitions;
+
+        &:hover {
+          // @extend %hover-effects;
+          color: $primary;
+        }
       }
     }
   }
