@@ -4,6 +4,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import { connect } from 'react-redux';
 import StickyBar from '../StickyBar/StickyBar';
+import Swipeable from '../../common/Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
   state = {
@@ -11,7 +12,8 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     splitPage: true,
     viewport: this.props.viewport.mode,
-    productsCount:8,
+    productsCount: 8,
+    pageCount: 0,
   };
 
   handlePageChange(newPage) {
@@ -44,6 +46,36 @@ class NewFurniture extends React.Component {
     }
   }
 
+  handlePageCountChange(newCount) {
+    this.setState({ pageCount: newCount });
+  }
+
+  getCurrentPageCountLength = () => {
+    let length =
+      this.props.products.filter(item => item.category === this.state.activeCategory)
+        .length / 8;
+    return length;
+  };
+
+  leftAction = e => {
+    if (this.state.activePage > 0) {
+      let page = this.state.activePage - 1;
+      this.setState({ activePage: page });
+    }
+    e.preventDefault();
+  };
+
+  rightAction = e => {
+    let currentPageCount = this.getCurrentPageCountLength();
+    let active = this.state.activePage;
+    let activeToSet = active + 1;
+
+    this.handlePageCountChange(currentPageCount);
+    if (activeToSet < currentPageCount) {
+      this.handlePageChange(activeToSet);
+    }
+    e.preventDefault();
+  };
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage, productsCount } = this.state;
@@ -66,44 +98,49 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <div className={styles.root}>
-        <div className='container'>
-          <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
-                <h3>New furniture</h3>
-              </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.name}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+      <Swipeable
+        leftAction={this.leftAction.bind()}
+        rightAction={this.rightAction.bind(this)}
+      >
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.panelBar}>
+              <div className='row no-gutters align-items-end'>
+                <div className={'col-auto ' + styles.heading}>
+                  <h3>New furniture</h3>
+                </div>
+                <div className={'col ' + styles.menu}>
+                  <ul>
+                    {categories.map(item => (
+                      <li key={item.name}>
+                        <a
+                          className={item.id === activeCategory && styles.active}
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
             </div>
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * productsCount, (activePage + 1) * productsCount)
+                .map(item => (
+                  <div key={item.id} className='col-lg-3 col-md-6'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
+            <StickyBar />
           </div>
-          <div className='row'>
-            {categoryProducts
-              .slice(activePage * productsCount, (activePage + 1) * productsCount)
-              .map(item => (
-                <div key={item.id} className='col-lg-3 col-md-6'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
-          </div>
-          <StickyBar />
         </div>
-      </div>
+      </Swipeable>
     );
   }
 }
