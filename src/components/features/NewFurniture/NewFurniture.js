@@ -11,7 +11,7 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     splitPage: true,
     viewport: this.props.viewport.mode,
-    productsCount: 8,
+    productsCount:8,
   };
 
   handlePageChange(newPage) {
@@ -96,7 +96,7 @@ class NewFurniture extends React.Component {
             {categoryProducts
               .slice(activePage * productsCount, (activePage + 1) * productsCount)
               .map(item => (
-                <div key={item.id} className='col'>
+                <div key={item.id} className='col-lg-3 col-md-6'>
                   <ProductBox {...item} />
                 </div>
               ))}
