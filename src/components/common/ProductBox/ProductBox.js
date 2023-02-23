@@ -86,6 +86,7 @@ const ProductBox = ({
             </Button>
             <Button
               variant='outline'
+              onClick={toggleCompareValue}
               className={isCompare ? styles.isCompare : undefined}
             >
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
