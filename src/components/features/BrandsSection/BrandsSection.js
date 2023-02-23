@@ -5,7 +5,11 @@ const BrandsSection = () => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row d-flex'></div>
+        <div className='row d-flex'>
+          <div className="col">
+            <h1>dzjghdksjzlgfhgpiosdfjk</h1>
+          </div>
+        </div>
       </div>
     </div>
   );
