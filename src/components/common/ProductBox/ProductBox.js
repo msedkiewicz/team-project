@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
@@ -8,17 +8,22 @@ import {
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import { toggleFavorite } from '../../../redux/productsRedux';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getCompareProducts,
+  toggleCompare,
+  toggleFavorite,
+} from '../../../redux/productsRedux';
+import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
 
 const ProductBox = ({
   name,
   price,
   promo,
   stars,
+  userRating,
   image,
   isFavorite,
   isCompare,
@@ -26,14 +31,31 @@ const ProductBox = ({
   oldPrice,
 }) => {
   const oldPricing = oldPrice;
+  const starsNumber = stars;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
+  const [compareValue, setCompareValue] = useState(isCompare);
   const productId = id;
-
+  const compareProducts = useSelector(state => getCompareProducts(state));
   const dispatch = useDispatch();
   const toggleFavoriteValue = e => {
     e.preventDefault();
     setFavoriteValue(!isFavorite);
     dispatch(toggleFavorite(productId));
+  };
+
+  const toggleCompareValue = e => {
+    e.preventDefault();
+    setCompareValue(!compareValue);
+
+    const productToCompare = compareProducts.find(p => p.id === id);
+
+    if (productToCompare && productToCompare.isCompare) {
+      dispatch(toggleCompare(id));
+    } else if (!productToCompare && compareProducts.length < 4) {
+      dispatch(toggleCompare(id));
+    } else {
+      return;
+    }
   };
 
   return (
@@ -63,6 +85,7 @@ const ProductBox = ({
             </a>
           ))}
         </div>
+        <UserRatingBox stars={starsNumber} id={productId} userRating={userRating} />
         <div className={styles.line}></div>
         <div className={styles.actions}>
           <div className={styles.outlines}>
@@ -75,6 +98,7 @@ const ProductBox = ({
             </Button>
             <Button
               variant='outline'
+              onClick={toggleCompareValue}
               className={isCompare ? styles.isCompare : undefined}
             >
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
@@ -104,11 +128,13 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
+
   stars: PropTypes.number,
   image: PropTypes.string,
   isFavorite: PropTypes.bool,
   isCompare: PropTypes.bool,
   id: PropTypes.string,
+  userRating: PropTypes.bool,
 };
 
 export default ProductBox;
