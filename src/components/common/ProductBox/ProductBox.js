@@ -17,6 +17,7 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
+import PopUpProduct from '../PopUpProduct/PopUpProduct';
 
 const ProductBox = ({
   name,
@@ -58,6 +59,14 @@ const ProductBox = ({
     }
   };
 
+  const [modal, setModal] = useState(false);
+  const closeModal = () => setModal(false);
+  const openModal = () => setModal(true);
+
+  if (modal) {
+    return <PopUpProduct showModal={modal} closeModal={closeModal} />;
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
@@ -65,7 +74,9 @@ const ProductBox = ({
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small'>Quick View</Button>
+            <Button variant='small' onClick={openModal}>
+              Quick View
+            </Button>
             <Button variant='small'>
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
             </Button>
