@@ -1,6 +1,5 @@
 // selectors
 export const getAllBrands = ({ brands }) => brands;
-export const getCountBrands = ({ brands }) => brands.lenght;
 
 // actions
 
