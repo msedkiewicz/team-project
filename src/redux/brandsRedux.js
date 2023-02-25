@@ -8,7 +8,7 @@ export const getCountBrands = ({ brands }) => brands.lenght;
 
 // reducer
 
-const brandsReducer = (statePart = [], action) => {
+const brandsReducer = (statePart = [], action = {}) => {
   switch (action.type) {
     default:
       return statePart;

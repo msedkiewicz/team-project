@@ -1,7 +1,22 @@
 .root {
-  h1 {
-    background-color: #ffffff;
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+
+  .brandsSectionRow {
+    padding: 0 15px;
+  }
+
+  .sectionElementsWrapper {
+    display: flex;
     border: 1px solid #e1e1e1;
-    margin-bottom: 2rem;
+    padding: 15px 0;
+  }
+
+  .buttonWrapper {
+    padding: 0;
+    height: 55px;
+  }
+  .arrowButton {
+    height: 50px;
   }
 }
