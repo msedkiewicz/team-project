@@ -63,17 +63,29 @@ const ProductBox = ({
       <div className={styles.photo}>
         <img className={styles.image} src={image} alt='furniture' />
         {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+        <div className={styles.buttonsContainer}>
+          <div className={styles.buttons}>
+            <Button variant='small'>Quick View</Button>
+            <Button variant='small'>
+              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+            </Button>
+          </div>
         </div>
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
+        <div className={styles.stars}>
+          {[1, 2, 3, 4, 5].map(i => (
+            <a key={i} href='#'>
+              {i <= stars ? (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              ) : (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              )}
+            </a>
+          ))}
+        </div>
         <UserRatingBox stars={starsNumber} id={productId} userRating={userRating} />
-
         <div className={styles.line}></div>
         <div className={styles.actions}>
           <div className={styles.outlines}>
