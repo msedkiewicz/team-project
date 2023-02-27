@@ -595,6 +595,24 @@ const initialState = {
   viewport: {
     mode: '',
   },
+  promotion: {
+    firstImage: './images/promotion_images/first-image.jpg',
+    firstAltName: 'sofa',
+    firstTitle: 'GUEST ROOM',
+    firstTitleStrong: 'SOFA',
+    firstDiscountBox: '-20%',
+    secondImage: './images/promotion_images/second-image.jpg',
+    secondAltName: 'chair',
+    secondTitleStrong: 'OFFICE',
+    secondTitle: 'CHAIR',
+    secondSubtitle: 'COLLECTION',
+    secondPrice: '$200.00',
+    thirdImage: './images/promotion_images/third-image.jpg',
+    thirdAltName: 'couch',
+    thirdTitleStrong: 'SPECIAL',
+    thirdTitle: 'COLLECTION',
+    thirdSubtitle: 'SAVE UP 45% OF FURNITURE',
+  },
 };
 
 export default initialState;
