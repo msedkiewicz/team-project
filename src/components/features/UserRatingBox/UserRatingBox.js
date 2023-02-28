@@ -4,7 +4,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './UserRatingBox.module.scss';
 import { useDispatch } from 'react-redux';
-import { setStarsValue } from '../../../redux/productsRedux';
+import { setRating, setStarsValue } from '../../../redux/productsRedux';
 
 const UserRatingBox = product => {
   const [starsNumber, setStarsNumber] = useState(product.stars);
@@ -16,7 +16,8 @@ const UserRatingBox = product => {
     e.preventDefault();
     setStarsNumber(id.id);
     setUserRating(true);
-    dispatch(setStarsValue({ id: id, starsNumber: starsNumber }));
+    dispatch(setStarsValue({ id: product.id, starsNumber: id.id }));
+    dispatch(setRating(product.id));
   };
   return (
     <div className={styles.stars}>
