@@ -3,7 +3,7 @@ import React from 'react';
 
 const PopUpProduct = product => {
   return (
-    <Modal show={product.showModal} onHide={product.closeModal}>
+    <Modal id='productModal' show={product.showModal} onHide={product.closeModal}>
       <Modal.Header>
         <h1>{product.name}</h1>
         <h2>dzkgjhdfglh</h2>

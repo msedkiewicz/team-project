@@ -13,6 +13,7 @@ import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getCompareProducts,
+  getProductById,
   toggleCompare,
   toggleFavorite,
 } from '../../../redux/productsRedux';
@@ -59,12 +60,24 @@ const ProductBox = ({
     }
   };
 
+  const showProduct = (e, product) => {
+    e.preventDefault();
+    dispatch(getProductById(product.id));
+    closeModal();
+  };
+
   const [modal, setModal] = useState(false);
   const closeModal = () => setModal(false);
   const openModal = () => setModal(true);
 
   if (modal) {
-    return <PopUpProduct showModal={modal} closeModal={closeModal} />;
+    return (
+      <PopUpProduct
+        showModal={modal}
+        closeModal={closeModal}
+        showProduct={showProduct}
+      />
+    );
   }
 
   return (
