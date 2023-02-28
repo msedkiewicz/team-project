@@ -17,6 +17,7 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   name,
@@ -73,7 +74,9 @@ const ProductBox = ({
         </div>
       </div>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <Link to={`/product/${id}`}>
+          <h5>{name}</h5>
+        </Link>
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map(i => (
             <a key={i} href='#'>
