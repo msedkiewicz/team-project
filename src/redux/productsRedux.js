@@ -34,7 +34,7 @@ export const setStarsValue = payload => ({
   payload,
 });
 
-export const setUserRating = payload => ({
+export const setRating = payload => ({
   type: SET_USER_RATING,
   payload,
 });
@@ -57,14 +57,12 @@ export default function reducer(statePart = [], action = {}) {
     case SET_STARS_VALUE:
       return statePart.map(products =>
         products.id === action.payload.id
-          ? { ...products, stars: action.payload.starsNumber.id }
+          ? { ...products, stars: action.payload.starsNumber }
           : products
       );
     case SET_USER_RATING:
       return statePart.map(products =>
-        products.id === action.payload.id
-          ? { ...products, userRating: action.payload.userRating }
-          : products
+        products.id === action.payload ? { ...products, userRating: true } : products
       );
     default:
       return statePart;
