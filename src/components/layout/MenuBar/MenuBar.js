@@ -20,7 +20,7 @@ const MenuBar = ({ children }) => (
               </a>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <a href='/shop/'>Furniture</a>
             </li>
             <li>
               <a href='#'>Chair</a>
