@@ -148,6 +148,7 @@ class NewFurniture extends React.Component {
                 ))}
             </div>
             <StickyBar />
+          </div>
         </div>
       </Swipeable>
     );
