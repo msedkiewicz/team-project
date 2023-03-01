@@ -1,7 +1,5 @@
 /* selectors */
 export const getAll = ({ products }) => products;
-export const getProductById = ({ product }, productId) =>
-  product.find(product => product.id === productId);
 export const getCount = ({ products }) => products.length;
 export const getHotDeal = ({ hotDealsProduct }) => hotDealsProduct;
 export const getPromotedProduct = ({ promotedProduct }) => promotedProduct;

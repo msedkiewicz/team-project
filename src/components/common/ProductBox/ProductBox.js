@@ -13,25 +13,25 @@ import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getCompareProducts,
-  getProductById,
   toggleCompare,
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
 import PopupProduct from '../PopupProduct/PopupProduct';
 
-const ProductBox = ({
-  name,
-  price,
-  promo,
-  stars,
-  userRating,
-  image,
-  isFavorite,
-  isCompare,
-  id,
-  oldPrice,
-}) => {
+const ProductBox = props => {
+  const {
+    name,
+    price,
+    promo,
+    stars,
+    userRating,
+    image,
+    isFavorite,
+    isCompare,
+    id,
+    oldPrice,
+  } = props;
   const oldPricing = oldPrice;
   const starsNumber = stars;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
@@ -60,17 +60,22 @@ const ProductBox = ({
     }
   };
 
-  const [oepnPopup, setOpenPopup] = useState(false);
+  const [popup, setPopup] = useState(false);
+
+  const openPopup = e => {
+    e.preventDefault();
+    setPopup(true);
+  };
 
   return (
     <div className={styles.root}>
+      {popup && <PopupProduct closePopup={setPopup} productBox={props} />}
       <div className={styles.photo}>
-        {oepnPopup && <PopupProduct closePopup={setOpenPopup} />}
         <img className={styles.image} src={image} alt='furniture' />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small' onClick={() => setOpenPopup(true)}>
+            <Button variant='small' onClick={openPopup}>
               Quick View
             </Button>
             <Button variant='small'>

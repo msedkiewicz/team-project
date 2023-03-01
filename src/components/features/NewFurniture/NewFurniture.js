@@ -53,8 +53,6 @@ class NewFurniture extends React.Component {
     }
   }
 
-
-
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage, productsCount, fade } = this.state;
@@ -103,7 +101,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className={`row + ${fade ? styles.fadeIn : styles.fadeOut}` }>
+          <div className={`row + ${fade ? styles.fadeIn : styles.fadeOut}`}>
             {categoryProducts
               .slice(activePage * productsCount, (activePage + 1) * productsCount)
               .map(item => (
