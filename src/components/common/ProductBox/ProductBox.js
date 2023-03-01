@@ -62,7 +62,8 @@ const ProductBox = ({
 
   const showProduct = (e, product) => {
     e.preventDefault();
-    dispatch(getProductById(product.id));
+    dispatch(getProductById(product.productId));
+    console.log('dupa');
     closeModal();
   };
 
@@ -87,7 +88,7 @@ const ProductBox = ({
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small' onClick={openModal}>
+            <Button variant='small' onClick={() => openModal()}>
               Quick View
             </Button>
             <Button variant='small'>
