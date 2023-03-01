@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BlogSection.module.scss';
-import PostBox from '../../common/PostBox/PostBox';
+import PostBox from '../../common/BlogPostBox/BlogPostBox';
 
 const BlogSection = () => {
   return (
