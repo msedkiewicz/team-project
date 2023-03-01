@@ -18,7 +18,7 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
-import PopUpProduct from '../PopUpProduct/PopUpProduct';
+import PopupProduct from '../PopupProduct/PopupProduct';
 
 const ProductBox = ({
   name,
@@ -60,35 +60,17 @@ const ProductBox = ({
     }
   };
 
-  const showProduct = (e, product) => {
-    e.preventDefault();
-    dispatch(getProductById(product.productId));
-    console.log('dupa');
-    closeModal();
-  };
-
-  const [modal, setModal] = useState(false);
-  const closeModal = () => setModal(false);
-  const openModal = () => setModal(true);
-
-  if (modal) {
-    return (
-      <PopUpProduct
-        showModal={modal}
-        closeModal={closeModal}
-        showProduct={showProduct}
-      />
-    );
-  }
+  const [oepnPopup, setOpenPopup] = useState(false);
 
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        {oepnPopup && <PopupProduct closePopup={setOpenPopup} />}
         <img className={styles.image} src={image} alt='furniture' />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small' onClick={() => openModal()}>
+            <Button variant='small' onClick={() => setOpenPopup(true)}>
               Quick View
             </Button>
             <Button variant='small'>

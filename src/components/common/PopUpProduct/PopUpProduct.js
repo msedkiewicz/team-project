@@ -1,15 +1,24 @@
-import { Modal } from 'bootstrap';
 import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './PopupProduct.module.scss';
 
-const PopUpProduct = product => {
+const PopupProduct = ({ closePopup }) => {
   return (
-    <Modal id='productModal' show={product.showModal} onHide={product.closeModal}>
-      <Modal.Header>
-        <h1>{product.name}</h1>
-        <h2>dzkgjhdfglh</h2>
-      </Modal.Header>
-    </Modal>
+    <div className={styles.root}>
+      <div className={styles.popupContainer}>
+        <button onClick={() => closePopup(false)}> X </button>
+        <div className={styles.title}>
+          <h1>hfaldsuifhd</h1>
+        </div>
+        <div className={styles.body}></div>
+        <div className={styles.footer}></div>
+      </div>
+    </div>
   );
 };
 
-export default PopUpProduct;
+PopupProduct.propTypes = {
+  closePopup: PropTypes.bool,
+};
+
+export default PopupProduct;
