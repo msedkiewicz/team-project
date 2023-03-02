@@ -18,6 +18,7 @@ import {
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
 import PopupProduct from '../PopupProduct/PopupProduct';
+import { Link } from 'react-router-dom';
 
 const ProductBox = props => {
   const {
@@ -73,7 +74,9 @@ const ProductBox = props => {
     <div className={styles.root}>
       {popup && <PopupProduct closePopup={setPopup} productBox={props} />}
       <div className={styles.photo}>
-        <img className={styles.image} src={image} alt='furniture' />
+        <Link to={`/product/${id}`}>
+          <img className={styles.image} src={image} alt='furniture' />
+        </Link>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
@@ -87,7 +90,9 @@ const ProductBox = props => {
         </div>
       </div>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <Link to={`/product/${id}`}>
+          <h5>{name}</h5>
+        </Link>
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map(i => (
             <a key={i} href='#'>

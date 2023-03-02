@@ -681,6 +681,32 @@ const initialState = {
   viewport: {
     mode: '',
   },
+  promotion: {
+    firstImage: './images/promotion_images/first-image.jpg',
+    firstAltName: 'sofa',
+    firstTitle: 'GUEST ROOM',
+    firstTitleStrong: 'SOFA',
+    firstDiscountBox: '-20%',
+    secondImage: './images/promotion_images/second-image.jpg',
+    secondAltName: 'chair',
+    secondTitleStrong: 'OFFICE',
+    secondTitle: 'CHAIR',
+    secondSubtitle: 'COLLECTION',
+    secondPrice: '$200.00',
+    thirdImage: './images/promotion_images/third-image.jpg',
+    thirdAltName: 'couch',
+    thirdTitleStrong: 'SPECIAL',
+    thirdTitle: 'COLLECTION',
+    thirdSubtitle: 'SAVE UP 45% OF FURNITURE',
+  },
+  brands: [
+    { id: 2, image: './images/brands_logos/image_Siedzonko.jpg' },
+    { id: 1, image: './images/brands_logos/image_Mebelek.jpg' },
+    { id: 3, image: './images/brands_logos/image_TARTAK.jpg' },
+    { id: 4, image: './images/brands_logos/image_Mebelek.jpg' },
+    { id: 5, image: './images/brands_logos/image_Siedzonko.jpg' },
+    { id: 6, image: './images/brands_logos/image_TARTAK.jpg' },
+  ],
 };
 
 export default initialState;
