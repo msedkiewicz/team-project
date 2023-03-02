@@ -4,15 +4,16 @@ import styles from './PopupProduct.module.scss';
 import Button from '../Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
 
 const PopupProduct = ({ closePopup, productBox }) => {
   return (
     <div className={styles.root}>
       <div className={styles.popupWindow}>
         <div className={`${styles.popupContainer}`}>
-          <div className={styles.popupClosingBtn}>
+          <div className={styles.popupClose}>
             <Button
-              className={styles.popupBtn}
+              className={styles.popupClosingBtn}
               variant='outline'
               onClick={() => closePopup(false)}
             >
@@ -26,6 +27,24 @@ const PopupProduct = ({ closePopup, productBox }) => {
             <div className={`col-7 ${styles.popupDetails}`}>
               <div className={styles.title}>
                 <h5>{productBox.name}</h5>
+              </div>
+              <div className={styles.popupStars}>
+                <UserRatingBox {...productBox} />
+              </div>
+              <div className={styles.prices}>
+                {productBox.oldPrice ? (
+                  <Button noHover className={styles.btnoldprice} variant='small'>
+                    $ {productBox.oldPrice}
+                  </Button>
+                ) : (
+                  <></>
+                )}
+                <Button className={styles.btnprice} noHover variant='small'>
+                  $ {productBox.price}
+                </Button>
+              </div>
+              <div className={styles.popupDescription}>
+                <p className={styles.description}>{productBox.description}</p>
               </div>
             </div>
           </div>

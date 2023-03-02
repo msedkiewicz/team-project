@@ -31,6 +31,8 @@ const ProductBox = props => {
     isCompare,
     id,
     oldPrice,
+    // eslint-disable-next-line no-unused-vars
+    desctiption, // use in PopupProduct
   } = props;
   const oldPricing = oldPrice;
   const starsNumber = stars;
@@ -140,7 +142,7 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
-
+  desctiption: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
   isFavorite: PropTypes.bool,
