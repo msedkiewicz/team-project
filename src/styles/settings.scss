@@ -12,7 +12,10 @@ $jetGrey: #363636;
 $charlestonGrey: #292929;
 $neroGrey: rgb(42, 42, 42);
 $culturedGray: #f4f5f7;
+$lightGrey2: #e2e2e2;
 
+$green: #87c037;
+$creamy-pink: #ffc2cd;
 $tigerEye: #d58e32;
 
 $solitudeBlue: rgb(224, 227, 237);
@@ -91,9 +94,6 @@ $footer-copyright-color: $lightGrey;
 $footer-social-media-link: $lightGrey;
 $footer-social-media-link-hover: $tigerEye;
 
-$form-border-color: #292929;
-$creamy-pink: #ffc2cd;
-
 $isFavorite: $creamy-pink;
 
 $banner-bg: $charcoalGrey;
@@ -102,6 +102,11 @@ $banner-percent: $primary;
 $banner-menu-bg: $culturedGray;
 $banner-text-menu: $charcoalGrey;
 $banner-text-menu-hover: $primary;
+
+$gallery-background: $white;
+$gallery-border: $lightGrey2;
+$gallery-text-main: $darkGrey;
+$gallery-button: $green;
 
 /* Add hover effects to buttons and any hover elements */
 
