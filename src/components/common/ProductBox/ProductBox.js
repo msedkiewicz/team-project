@@ -17,20 +17,24 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
+import PopUpProduct from '../PopUpProduct/PopUpProduct';
 import { Link } from 'react-router-dom';
 
-const ProductBox = ({
-  name,
-  price,
-  promo,
-  stars,
-  userRating,
-  image,
-  isFavorite,
-  isCompare,
-  id,
-  oldPrice,
-}) => {
+const ProductBox = props => {
+  const {
+    name,
+    price,
+    promo,
+    stars,
+    userRating,
+    image,
+    isFavorite,
+    isCompare,
+    id,
+    oldPrice,
+    // eslint-disable-next-line no-unused-vars
+    desctiption, // use in PopupProduct
+  } = props;
   const oldPricing = oldPrice;
   const starsNumber = stars;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
@@ -59,8 +63,16 @@ const ProductBox = ({
     }
   };
 
+  const [popup, setPopup] = useState(false);
+
+  const openPopup = e => {
+    e.preventDefault();
+    setPopup(true);
+  };
+
   return (
     <div className={styles.root}>
+      {popup && <PopUpProduct closePopup={setPopup} productBox={props} />}
       <div className={styles.photo}>
         <Link to={`/product/${id}`}>
           <img className={styles.image} src={image} alt='furniture' />
@@ -68,7 +80,9 @@ const ProductBox = ({
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small'>Quick View</Button>
+            <Button variant='small' onClick={openPopup}>
+              Quick View
+            </Button>
             <Button variant='small'>
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
             </Button>
@@ -133,7 +147,7 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
-
+  desctiption: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
   isFavorite: PropTypes.bool,

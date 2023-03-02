@@ -20,6 +20,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: true,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -34,6 +36,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -47,6 +51,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: true,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -60,6 +66,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -73,6 +81,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -86,6 +96,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -99,6 +111,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -112,6 +126,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -125,6 +141,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -138,6 +156,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -151,6 +171,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -164,6 +186,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -177,6 +201,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -190,6 +216,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -203,6 +231,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -216,6 +246,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -229,6 +261,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -242,6 +276,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -255,6 +291,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -268,6 +306,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -281,6 +321,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -294,6 +336,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -307,6 +351,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -320,6 +366,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-1',
@@ -333,6 +381,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-2',
@@ -346,6 +396,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-3',
@@ -359,6 +411,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-4',
@@ -372,6 +426,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-5',
@@ -385,6 +441,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'magic-chair-6',
@@ -398,6 +456,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-1',
@@ -411,6 +471,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-2',
@@ -424,6 +486,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-3',
@@ -437,6 +501,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-4',
@@ -450,6 +516,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-5',
@@ -463,6 +531,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-6',
@@ -476,6 +546,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'comfy-sofa-7',
@@ -489,6 +561,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'stable-table-1',
@@ -502,6 +576,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'stable-table-2',
@@ -515,6 +591,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'stable-table-3',
@@ -528,6 +606,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'home-dining-1',
@@ -541,6 +621,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'home-dining-2',
@@ -554,6 +636,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
     {
       id: 'home-dining-3',
@@ -567,6 +651,8 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isCompare: false,
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dolor voluptas possimus saepe nam aspernatur deserunt voluptatem hic officiis, quae facilis esse, facere iste expedita magnam fuga! Odit, distinctio ut!',
     },
   ],
   cart: {
