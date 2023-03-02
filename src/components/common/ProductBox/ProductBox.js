@@ -17,7 +17,7 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
-import PopupProduct from '../PopupProduct/PopupProduct';
+import PopUpProduct from '../PopUpProduct/PopUpProduct';
 import { Link } from 'react-router-dom';
 
 const ProductBox = props => {
@@ -72,7 +72,7 @@ const ProductBox = props => {
 
   return (
     <div className={styles.root}>
-      {popup && <PopupProduct closePopup={setPopup} productBox={props} />}
+      {popup && <PopUpProduct closePopup={setPopup} productBox={props} />}
       <div className={styles.photo}>
         <Link to={`/product/${id}`}>
           <img className={styles.image} src={image} alt='furniture' />
