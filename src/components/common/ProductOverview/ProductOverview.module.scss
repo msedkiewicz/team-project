@@ -64,4 +64,76 @@
     font-size: 12px;
     line-height: 16px;
   }
+
+  .productHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    align-items: center;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    line-height: 12p;
+    font-weight: 600;
+  }
+
+  .headerButtonLeft {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 8px;
+  }
+  .headerButtonRight {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 8px;
+    margin-left: 5px;
+  }
+
+  .line {
+    margin: 15px 0;
+    border-bottom: 1px solid $silverGrey;
+    position: relative;
+  }
+
+  .reviews {
+    font-size: 12px;
+    display: flex;
+  }
+
+  .star {
+    margin-right: 2px;
+  }
+
+  .reviewLink {
+    margin: 0 10px;
+    color: $charcoalGrey;
+    font-size: 11px;
+  }
+
+  .verticalLine {
+    color: $silverGrey;
+  }
+
+  .prices {
+    display: flex;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .btnoldprice {
+    font-size: 18px;
+    font-weight: 400;
+    color: $lightGrey;
+    text-decoration: line-through;
+    text-decoration-color: $darkGrey;
+    background: $white;
+    padding-left: 0;
+  }
+
+  .btnprice {
+    font-size: 18px;
+    font-weight: 600;
+  }
 }
