@@ -707,6 +707,15 @@ const initialState = {
     { id: 5, image: './images/brands_logos/image_Siedzonko.jpg' },
     { id: 6, image: './images/brands_logos/image_TARTAK.jpg' },
   ],
+  feedback: [
+    {
+      name: 'John Smith',
+      title: 'Furniture Client',
+      content:
+        ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      image: './images/client_images/johnSmith.jpg',
+    },
+  ],
 };
 
 export default initialState;
