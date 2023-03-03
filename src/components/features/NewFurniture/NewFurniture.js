@@ -149,6 +149,16 @@ class NewFurniture extends React.Component {
             </div>
             <StickyBar />
           </div>
+          <div className={`row + ${fade ? styles.fadeIn : styles.fadeOut}`}>
+            {categoryProducts
+              .slice(activePage * productsCount, (activePage + 1) * productsCount)
+              .map(item => (
+                <div key={item.id} className='col-lg-3 col-md-6'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
+          </div>
+          <StickyBar />
         </div>
       </Swipeable>
     );

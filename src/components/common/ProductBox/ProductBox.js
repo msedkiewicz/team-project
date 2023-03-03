@@ -17,19 +17,24 @@ import {
   toggleFavorite,
 } from '../../../redux/productsRedux';
 import UserRatingBox from '../../features/UserRatingBox/UserRatingBox';
+import PopUpProduct from '../PopUpProduct/PopUpProduct';
+import { Link } from 'react-router-dom';
 
-const ProductBox = ({
-  name,
-  price,
-  promo,
-  stars,
-  userRating,
-  image,
-  isFavorite,
-  isCompare,
-  id,
-  oldPrice,
-}) => {
+const ProductBox = props => {
+  const {
+    name,
+    price,
+    promo,
+    stars,
+    userRating,
+    image,
+    isFavorite,
+    isCompare,
+    id,
+    oldPrice,
+    // eslint-disable-next-line no-unused-vars
+    desctiption, // use in PopupProduct
+  } = props;
   const oldPricing = oldPrice;
   const starsNumber = stars;
   const [favoriteValue, setFavoriteValue] = useState(isFavorite);
@@ -58,14 +63,26 @@ const ProductBox = ({
     }
   };
 
+  const [popup, setPopup] = useState(false);
+
+  const openPopup = e => {
+    e.preventDefault();
+    setPopup(true);
+  };
+
   return (
     <div className={styles.root}>
+      {popup && <PopUpProduct closePopup={setPopup} productBox={props} />}
       <div className={styles.photo}>
-        <img className={styles.image} src={image} alt='furniture' />
+        <Link to={`/product/${id}`}>
+          <img className={styles.image} src={image} alt='furniture' />
+        </Link>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttonsContainer}>
           <div className={styles.buttons}>
-            <Button variant='small'>Quick View</Button>
+            <Button variant='small' onClick={openPopup}>
+              Quick View
+            </Button>
             <Button variant='small'>
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
             </Button>
@@ -73,7 +90,9 @@ const ProductBox = ({
         </div>
       </div>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <Link to={`/product/${id}`}>
+          <h5>{name}</h5>
+        </Link>
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map(i => (
             <a key={i} href='#'>
@@ -128,7 +147,7 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
-
+  desctiption: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
   isFavorite: PropTypes.bool,
