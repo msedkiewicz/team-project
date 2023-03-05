@@ -14,8 +14,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
-  faFacebook,
-  faGooglePlus,
+  faFacebookF,
+  faGooglePlusG,
   faTwitter,
   faPinterestP,
   faLinkedinIn,
@@ -103,7 +103,7 @@ const ProductOverview = () => {
             </div>
             <div className={styles.line}></div>
             <div className={styles.prices}>
-              <Button className={styles.btnoldprice} variant='small'>
+              <Button className={styles.btnoldprice} noHover variant='small'>
                 $350.00
               </Button>
               <Button className={styles.btnprice} noHover variant='small'>
@@ -111,11 +111,118 @@ const ProductOverview = () => {
               </Button>
             </div>
             <div className={styles.line}></div>
-            <div className={styles.aboutProductButtons}></div>
-            <div className={styles.quantity}></div>
-            <div className={styles.quickOverview}></div>
-            <div className={styles.sorage}></div>
-            <div className={styles.socialMedia}></div>
+            <div className={styles.aboutProductButtons}>
+              <div className={styles.actionButtons}>
+                <Button className={styles.addToCartBtn} variant='small'>
+                  <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
+                  CART
+                </Button>
+                <Button className={styles.heartBtn} variant='outline'>
+                  <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
+                </Button>
+                <Button className={styles.toggleBtn} variant='outline'>
+                  <FontAwesomeIcon icon={faExchangeAlt}></FontAwesomeIcon>
+                </Button>
+                <Button className={styles.envelopeBtn} variant='outline'>
+                  <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                </Button>
+              </div>
+              <div className={styles.quantityButtons}>
+                <div className={styles.quantityText}>Quantity:</div>
+                <Button className={styles.quantityBtn} noHover variant='outline'>
+                  2
+                </Button>
+                <Button className={styles.minusBtn} variant='outline'>
+                  <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
+                </Button>
+                <Button className={styles.plusBtn} variant='outline'>
+                  <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                </Button>
+              </div>
+            </div>
+            <div className={styles.line}></div>
+            <div className={styles.quickOverviewContainer}>
+              <h6>Quick Overview</h6>
+              <div className={styles.quickOverwiew}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                tempora molestiae natus consequatur inventore similique quas, vero
+                numquam, corporis quod asperiores quae quasi explicabo. Ab eveniet amet
+                et veniam quam.
+              </div>
+            </div>
+            <div className={styles.line}></div>
+            <div className={styles.sorage}>
+              <div className={styles.availability}>
+                <div>
+                  <strong>Availability:</strong>
+                </div>
+                <div>in stock</div>
+              </div>
+              <div className={styles.category}>
+                <div>
+                  <strong>Category:</strong>
+                </div>
+                <div>Furniture</div>
+              </div>
+            </div>
+            <div className={styles.line}></div>
+            <div className={styles.socialMedia}>
+              <Button
+                noHover
+                className={`${styles.socialMediaBtn} ${styles.facebook}`}
+                variant='outline'
+              >
+                <FontAwesomeIcon
+                  className={`${styles.socialMediaIcon} ${styles.facebookIcon}`}
+                  icon={faFacebookF}
+                ></FontAwesomeIcon>
+                Share
+              </Button>
+              <Button
+                noHover
+                className={`${styles.socialMediaBtn} ${styles.googlePlus}`}
+                variant='outline'
+              >
+                <FontAwesomeIcon
+                  className={`${styles.socialMediaIcon} ${styles.googlePlusIcon}`}
+                  icon={faGooglePlusG}
+                ></FontAwesomeIcon>
+                Google+
+              </Button>
+              <Button
+                noHover
+                className={`${styles.socialMediaBtn} ${styles.twitter}`}
+                variant='outline'
+              >
+                <FontAwesomeIcon
+                  className={`${styles.socialMediaIcon} ${styles.twitterIcon}`}
+                  icon={faTwitter}
+                ></FontAwesomeIcon>
+                Tweet
+              </Button>
+              <Button
+                noHover
+                className={`${styles.socialMediaBtn} ${styles.pinterest}`}
+                variant='outline'
+              >
+                <FontAwesomeIcon
+                  className={`${styles.socialMediaIcon} ${styles.pinterestIcon}`}
+                  icon={faPinterestP}
+                ></FontAwesomeIcon>
+                Share
+              </Button>
+              <Button
+                noHover
+                className={`${styles.socialMediaBtn} ${styles.linkedin}`}
+                variant='outline'
+              >
+                <FontAwesomeIcon
+                  className={`${styles.socialMediaIcon} ${styles.linkedInIcon}`}
+                  icon={faLinkedinIn}
+                ></FontAwesomeIcon>
+                Share
+              </Button>
+            </div>
           </div>
         </div>
       </div>

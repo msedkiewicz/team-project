@@ -16,7 +16,7 @@
   .mainPhoto {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: $lightGrey2;
     margin-bottom: 15px;
   }
@@ -92,7 +92,7 @@
   }
 
   .line {
-    margin: 15px 0;
+    margin: 20px 0;
     border-bottom: 1px solid $silverGrey;
     position: relative;
   }
@@ -135,5 +135,155 @@
   .btnprice {
     font-size: 18px;
     font-weight: 600;
+  }
+
+  .aboutProductButtons {
+    margin: 20px 0;
+  }
+
+  .actionButtons {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .addToCartBtn {
+    margin-right: 5px;
+    font-weight: 600;
+  }
+
+  .heartBtn {
+    margin-right: 5px;
+  }
+
+  .toggleBtn {
+    margin-right: 5px;
+  }
+
+  .quantityButtons {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .quantityText {
+    margin-right: 30px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .quantityBtn {
+    margin-right: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .minusBtn {
+    margin-right: 5px;
+  }
+
+  .quickOverviewContainer {
+    h6 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .quickOverwiew {
+      font-size: 12px;
+      line-height: 20px;
+      color: $granitGrey;
+    }
+  }
+
+  .sorage {
+    font-size: 12px;
+  }
+
+  .availability {
+    display: flex;
+
+    div:first-child {
+      width: 85px;
+    }
+  }
+
+  .category {
+    display: flex;
+    margin-top: 10px;
+
+    div:first-child {
+      width: 85px;
+    }
+  }
+
+  .socialMedia {
+    display: flex;
+  }
+
+  .socialMediaBtn {
+    border-color: $granitGrey;
+    color: $granitGrey;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .socialMediaIcon {
+    margin-right: 5px;
+    font-size: 14px;
+
+    &.facebookIcon {
+      color: $facebook;
+    }
+
+    &.googlePlusIcon {
+      color: $google;
+    }
+
+    &.twitterIcon {
+      color: $twitter;
+    }
+
+    &.pinterestIcon {
+      color: $pinterest;
+    }
+
+    &.linkedInIcon {
+      color: $linkedin;
+    }
+  }
+
+  .socialMediaBtn:hover {
+    .socialMediaIcon {
+      color: $white;
+    }
+
+    &.facebook {
+      border-color: $facebook;
+      background-color: $facebook;
+      color: $white;
+    }
+
+    &.googlePlus {
+      border-color: $google;
+      background-color: $google;
+      color: $white;
+    }
+
+    &.twitter {
+      border-color: $twitter;
+      background-color: $twitter;
+      color: $white;
+    }
+
+    &.pinterest {
+      border-color: $pinterest;
+      background-color: $pinterest;
+      color: $white;
+    }
+
+    &.linkedin {
+      border-color: $linkedin;
+      background-color: $linkedin;
+      color: $white;
+    }
   }
 }
