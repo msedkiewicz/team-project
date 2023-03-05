@@ -12,6 +12,13 @@ const ProductList = () => (
             <Banner />
           </div>
         </div>
+        <div className='row'>
+          <div className='col-9'>Product List</div>
+          <div className='col-3'>Filers</div>
+        </div>
+        <div className='row'>
+          <div className='col'>Brands</div>
+        </div>
       </div>
     </div>
   </div>
