@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../../common/Banner/Banner';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 
@@ -7,7 +8,9 @@ const ProductList = () => (
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className='col'>Banner</div>
+          <div className='col'>
+            <Banner />
+          </div>
         </div>
         <div className='row'>
           <div className='col-9'>Product List</div>
